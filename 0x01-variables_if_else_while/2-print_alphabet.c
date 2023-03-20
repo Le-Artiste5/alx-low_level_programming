@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include <stdio.h>
 /**
- * main - print letters of the English alphabet
+ * main - print if the number is postive, zero, or negative
  *
- * Description: This program prints the letters of the English alphabet
- * 
- * Return: 0(SUCCESS)
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
+ * Return: 0
  */
 int main(void)
 {
 char ch;
 for (ch = 'a' ; ch <= 'z' ; ch++)
 {
-putchar(ch);
+	putchar(ch);
 }
 putchar('\n');
 return (0);
 }
+
