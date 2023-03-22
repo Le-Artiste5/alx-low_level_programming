@@ -1,13 +1,13 @@
 #include <stdio.h>
-
-/**main-inputing putchar
- * description: printing putchar
- * Return: Always zero(0)
+/*main-Printing putchar
+ *Return: Always return zero(0)
+ *
  */
 
 main()
 {
-	putchar("_putchar\n");
-	return (0);
+putchar("_putchar");
+putchar(10);
+return (0);
 }
 
