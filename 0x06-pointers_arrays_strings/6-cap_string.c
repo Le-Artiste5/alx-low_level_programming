@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h"
 
 /**
  * cap_string - capitalizes everey word of a string
@@ -32,5 +32,3 @@ char *cap_string(char *s)
 
 	return (s);
 }
-
-
