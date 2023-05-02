@@ -1,30 +1,26 @@
-/**
- * File: 3-add_nodeint_end.c
- * Author: Johnson Otobong 
- */
-
 #include "lists.h"
 /**
- * add_nodeint_end - function that adds node to the end of a linked list
- * @head: points to the address of the head of a linked list
- * @n: The integer that will be in new node
+ * add_nodeint_end - Function that adds node to the end of a linked list
+ * @head: points to address of the head of the linked list
+ * @n: The integer that will be in the new node
  *
- * Return: NULL if function fails or address of the new element
- *â€/
+ * Return: Null if fails or address of new element
+ */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *recent, *extreme;
 recent = malloc(sizeof(listint_t));
+
 if (recent == NULL)
-return (NULL)â€;
+return (NULL);
 
 recent->n = n;
 recent->next = NULL;
 
 if (*head == NULL)
-*
-*head = recent;
+*head = recent
+
 else
 {
 extreme = *head;
@@ -32,7 +28,6 @@ while (extreme->next != NULL)
 extreme = extreme->next;
 extreme->next = recent;
 }
-
-return (recent);
+return (*head);
 }
 
