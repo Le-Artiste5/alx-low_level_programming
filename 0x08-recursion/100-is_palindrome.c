@@ -28,7 +28,7 @@ int _strlen_recursion(char *s)
 
 int com_string(char *s, int s_interator, int l_iterator)
 {       
-        if (*s + s_iterator) == *(s + l_iterator)
+        if (*(s + s_iterator) == *(s + l_iterator)
 		if (s_iterator == l_iterator || s_iterator == l_iterator + 1)
 			return (1);
 	return (0 + comp_string(s, s_iterator + 1, l_iterator - 1));
@@ -38,7 +38,7 @@ return (0);
 }
 /**
  *
- * is_palindrome - detects if a string is a palindrome
+ * is_palindrome - checks if a string is a palindrome 
  * @s: The string to be checked
  *
  * Return: 1 if it is a palindrome and 0 if not

@@ -1,26 +1,26 @@
 #include "main.h"
 /**
- * prime_a - calculates or checks if a number is a prime number
+ * prime_no - calculates or checks if a number is a prime number
  *
- * @a: input number
+ * @c: input number
  *
- * @b: Divisor
+ * @d: Divisor
  *
  * Return: 0
  * 
  */
 
-int prime_a(int a, int b)
+int prime_no(int c, int d)
 {
-	if (a <= 1 || (a !=b ) && a % b == 0)
+	if (c <= 1 || (c != d ) && c % d == 0)
 	{
 		return (0);
 	}
-	else if (a == b)
+	else if (c == d)
 	{
 		return (1);
 	}
-	return (prime_a(a, b + 1);
+	return (prime_no(c, d + 1);
 
 }
 
@@ -33,6 +33,6 @@ int prime_a(int a, int b)
 
 int is_prime_number(int n)
 {
-return (prime_a(n, 2);
+return (prime_no(n, 2);
 }
 
