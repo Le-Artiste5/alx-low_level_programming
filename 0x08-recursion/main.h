@@ -14,6 +14,7 @@ int wildcmp(char *s1, char *s2);
 int com_string(char *s, int s_interator, int l_iterator);
 int prime_no(int c, int d);
 int power_operator(int e, int f);
+int _putchar(char ch);
 
 
 #endif
