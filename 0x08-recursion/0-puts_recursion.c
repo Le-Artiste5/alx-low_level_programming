@@ -4,7 +4,7 @@
  * _puts_recursion - recursive function to print character on screen
  * @s: points to the string
  *
- * Return: null
+ * Return: SUCCESS
  *
  */
 
