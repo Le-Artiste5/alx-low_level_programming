@@ -1,6 +1,5 @@
 #include <stdio.h>
 /**
- *
  * main - function that prints name and new line
  *
  *
