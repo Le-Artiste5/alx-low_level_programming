@@ -7,6 +7,7 @@
  * @f: a function that points to a pointer
  *
  * @name: the name to be printed
+ * Return: Nothing
  */
 
 void print_name(char *name, void (*f)(char *))
