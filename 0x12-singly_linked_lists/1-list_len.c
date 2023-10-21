@@ -1,7 +1,6 @@
 #include "lists.h"
 /**
  * list_len - prints number of elements in list
- * @new: new node
  * @h: head pointer to node
  * Return: number of elements
  */
