@@ -1,10 +1,16 @@
-        global  main
-        extern  printf
+global _start
+section .text
+_start:
+mov rax, 1
+mov rdi, 1
+mov rsi, my_message
+mov rdx, length
+syscall
 
-msg:    db      "Hello world",0
+mov rax, 60
+mov rdi, 1
+syscall
 
-main:
-        mov  rdi, msg
-        call printf
-        mov  rax, 0
-        ret
+section .data
+my_message; db 'Hello, Holberton',0xa
+length: equ $-my_message
