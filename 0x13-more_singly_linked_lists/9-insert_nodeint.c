@@ -41,7 +41,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new->next = pointer1;
 	else
 	{
-		*pointer2 = pointer1->next;
+		pointer2 = pointer1->next;
 		pointer1->next = new;
 		new->next = pointer2;
 	}
