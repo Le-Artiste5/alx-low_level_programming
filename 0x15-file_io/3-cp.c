@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	while (no_char == 1024)
 	{
 		no_char = read(file1, buff, 1024);
-		if (no_char > 1024)
+		if (no_char == -1)
 			errf(-1, 0, argv);
 		nowr = write(file2, buff, no_char);
 		if (nowr == -1)
