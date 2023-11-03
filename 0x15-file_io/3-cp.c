@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	int file2, eclose;
 	ssize_t no_char, nowr;
 
-	if ((argc < 3) && (argc > 3))
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
