@@ -1,27 +1,31 @@
 #include "main.h"
-
 /**
- *power_operator: returns the square root
- *_sqrt_recursion - A function that provides the natural square root of a number
- *@e: input number
+ * power_operator - returns the square root
  *
- *@f: Iterating number
+ * @e: input number
+ *
+ * @f: Iterating number
  *
  * Return: Either square root of number or -1
  */
-
 int power_operator(int e, int f)
 {
+	if (f * f > e)
+	{
+		return (-1);
+	}
 	if (f * f == e)
 	{
 		return (f);
 	}
-	else if (f * f > e)
-	{
-		return (-1);
-	}
-	return(power_operator(e, f + 1));
-
+	return (power_operator(e, f + 1));
+}
+/**
+ * _sqrt_recursion - natural square root of number
+ * @n: number
+ *
+ * Return: The aquare root
+ */
 int _sqrt_recursion(int n)
 {
 	return (power_operator(n, 0));
