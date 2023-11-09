@@ -1,45 +1,51 @@
 #include "lists.h"
-list_t *create_node(const char *str);
-
 /**
  * add_node_end - a function that adds node
  * @head: pointer to first node
- * @str: string
- * Return: pointer to the head
+ * @str: string of chars
+ * Return: points to head
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	unsigned int a;
-	unsigned int iterate;
-
 	list_t *n_node, *temp;
 
-	n_node = *head;
+	temp = *head;
 
-	temp = malloc(sizeof(list_t));
-
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-		iterate++;
-	}
-
-	temp->str = strdup(str);
-	temp->len = iterate;
-
-	temp->next = NULL;
-
+	if (head == NULL)
+		n_node = makenode(str);
 	if (n_node == NULL)
-		*head = temp;
-	else
+		return (NULL);
+	if (*head == NULL)
 	{
-		while (n_node->next != NULL)
-	{
-		n_node = n_node->next;
+		*head = n_node;
+		return (*head);
 	}
-	}
-	n_node->next = temp;
+	for (temp->next != NULL)
+		temp = temp->next;
+	temp->next = n_node;
+
 	return (*head);
 
 }
+
+/**
+ * makenode - creates a node
+ * @str: a string
+ *
+ * Return: points to string
+ */
+list_t makenode(const char *str)
+{
+	list_t *n_node;
+
+	n_node = malloc(sizeof(list_t));
+
+	if (n_node == NULL)
+		return (NULL);
+	n_node->str = strdup(str);
+	n_node->len = lent(str);
+	n_node->next = NULL;
+
+	return (n_node);
+}
+
