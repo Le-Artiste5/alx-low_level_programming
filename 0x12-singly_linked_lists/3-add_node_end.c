@@ -12,7 +12,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	temp = *head;
 
 	if (head == NULL)
-		n_node = makenode(str);
+	{
+		return (NULL);
+	}
+
+	n_node = makenode(str);
+
 	if (n_node == NULL)
 		return (NULL);
 	if (*head == NULL)
@@ -20,21 +25,21 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = n_node;
 		return (*head);
 	}
-	for (temp->next != NULL)
+
+	while (temp->next != NULL)
 		temp = temp->next;
 	temp->next = n_node;
 
 	return (*head);
 
 }
-
 /**
  * makenode - creates a node
  * @str: a string
  *
  * Return: points to string
  */
-list_t makenode(const char *str)
+list_t *makenode(const char *str)
 {
 	list_t *n_node;
 
@@ -49,3 +54,23 @@ list_t makenode(const char *str)
 	return (n_node);
 }
 
+/**
+ * lent - lenght of a used string
+ * @str: a string
+ *
+ * Return: length
+ */
+int lent(const char *str)
+{
+	int a;
+
+	if (str == NULL)
+		return (0);
+	a = 0;
+	while (str[a] != '\0')
+	{
+		a++;
+	}
+
+	return (a);
+}
